@@ -1,0 +1,154 @@
+body {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.main {
+	flex-grow: 1;
+}
+
+.container {
+	margin: 0 auto;
+
+	max-width: 1590px;
+	padding: 0 15px;
+}
+
+.container-lg {
+	max-width: 1830px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.btn-chat,
+.btn-cart {
+	padding: 12px 31px 12px 66px;
+	@media screen and (max-width: 767px) {
+		padding: 10px;
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+		display: grid;
+		place-items: center;
+		overflow: hidden;
+		span {
+			display: none;
+		}
+	}
+	position: relative;
+
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 30px;
+
+	color: $black;
+	font-family: Montserrat;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: normal;
+	letter-spacing: -0.56px;
+	border: 1px solid transparent;
+	transition:
+		border 150ms ease-in-out,
+		background-color 300ms ease-in-out;
+
+	&::before {
+		content: '';
+		position: absolute;
+		display: block;
+		top: 50%;
+		left: 30px;
+		transform: translateY(-50%);
+		width: 24px;
+		height: 24px;
+		@media screen and (max-width: 767px) {
+			position: relative;
+			left: auto;
+			top: auto;
+			transform: none;
+		}
+	}
+}
+.btn-chat {
+	&::before {
+		background-image: url('../img/chat.png');
+	}
+
+	background-color: $orange-light;
+
+	@include hover {
+		border: 1px solid $orange-light;
+		background-color: #fff;
+	}
+	&:active {
+		border: 1px solid $orange-light;
+		background-color: #fff;
+		scale: 0.97;
+	}
+}
+
+.btn-cart {
+	background-color: $yellow-light;
+	&::before {
+		background-image: url('../img/cart.png');
+	}
+	@include hover {
+		border: 1px solid $orange-light;
+		background-color: #fff;
+	}
+	&:active {
+		border: 1px solid $orange-light;
+		background-color: #fff;
+		scale: 0.97;
+	}
+}
+
+.logo {
+	display: block;
+	flex-shrink: 0;
+	width: 148px;
+	height: 42px;
+	img {
+		height: 100%;
+		width: 100%;
+	}
+}
+
+.disable-scroll {
+	overflow: hidden !important;
+}
+
+.border-bottom-line {
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -6px;
+
+		height: 1px;
+		width: 100%;
+
+		background: #000;
+		border-radius: 5px;
+		transform: scaleX(0);
+		@include trans(transform);
+
+		// transform-origin: right bottom;
+		transform-origin: center;
+	}
+
+	@include hover {
+		&::before {
+			transform: scaleX(1);
+			// transform-origin: left bottom;
+		}
+	}
+}

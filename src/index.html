@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+	@include('assets/layout/head/head.html', {"title": 'Your Title'})
+
+	<body>
+		@include('assets/layout/components/overlay.html')
+
+		<div class="wrapper">
+			<div class="top-info-block">
+				<ul>
+					<li>Free shipping from $200</li>
+					<li>
+						collecting afforadable offers from best manufacturers worldwide
+					</li>
+					<li>Special offers every week</li>
+				</ul>
+			</div>
+			@include('assets/layout/header.html')
+
+			<main class="main">@include('assets/layout/hero.html')</main>
+
+			@include('assets/layout/footer.html')
+		</div>
+
+		<script type="module" src="assets/js/main.js"></script>
+	</body>
+</html>
