@@ -1,9 +1,10 @@
 .hero {
-	position: relative;
 	padding-bottom: 72px;
 	// .hero__container
 
 	&__container {
+		position: relative;
+
 		@media screen and (max-width: 1200px) {
 			display: flex;
 			flex-direction: column;
@@ -31,10 +32,11 @@
 		@media screen and (max-width: 1200px) {
 			position: relative;
 			order: -1;
+			right: auto;
 		}
 		z-index: -1;
 		position: absolute;
-		right: 0;
+		right: -165px;
 		top: 0;
 		width: 1000px;
 		height: 600px;
