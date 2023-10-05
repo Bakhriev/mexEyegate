@@ -3,6 +3,7 @@
 	align-items: center;
 	flex-wrap: wrap;
 	gap: 18px;
+	width: 100%;
 }
 
 .menu > li {
@@ -42,6 +43,34 @@
 .menu-item.menu-item-has-children a {
 	display: block;
 	position: relative;
+}
+.menu-item.menu-item-left {
+	margin-right: auto;
+}
+.menu-item.menu-item-orange {
+	& > a {
+		color: $black;
+		font-family: Montserrat;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: normal;
+		background-color: $orange-light;
+		border: 1px solid $orange-light;
+	}
+
+	&::after {
+		background-image: url(../img/arrow-bottom-black.svg);
+	}
+	.sub-menu {
+		background-color: $orange-light;
+		.menu-item {
+			a {
+				@include hover {
+					background-color: rgb(215, 79, 6);
+				}
+			}
+		}
+	}
 }
 
 .menu-item-has-children::after {
