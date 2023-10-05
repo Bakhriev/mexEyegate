@@ -1,5 +1,13 @@
 body {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	font-family: Montserrat;
+	font-size: 16px;
+	font-weight: 400;
+	color: $bodyTextColor;
+	line-height: 150%;
+	@media screen and (max-width: 992px) {
+		font-size: 14px;
+	}
 }
 
 .wrapper {
@@ -190,4 +198,40 @@ body {
 .btn--secondary.active {
 	color: #fff;
 	background-color: $green;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $black;
+	font-family: Montserrat;
+	font-weight: 700;
+}
+h1 {
+	font-size: 48px;
+	line-height: 150%;
+	span {
+		color: #537046;
+	}
+}
+h2 {
+	font-size: 40px;
+}
+h3 {
+	font-size: 32px;
+	line-height: 168%;
+}
+h4 {
+	font-size: 28px;
+	line-height: 160%;
+}
+h5 {
+	font-size: 25px;
+	line-height: 168%;
+}
+h6 {
+	font-size: 20px;
+	line-height: 180%;
 }
