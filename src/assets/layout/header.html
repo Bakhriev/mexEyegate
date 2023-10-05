@@ -8,16 +8,10 @@
 				<img width="148" height="42" src="./assets/img/logo.svg" alt="logo" />
 			</a>
 			<div class="actions header-top__actions">
-				<button
-					class="actions__btn btn-chat"
-					aria-label="click to open live chat"
-				>
+				<button class="btn-chat" aria-label="click to open live chat">
 					<span>Live chat</span>
 				</button>
-				<button
-					class="actions__btn btn-cart"
-					aria-label="click to open your cart"
-				>
+				<button class="btn-cart" aria-label="click to open your cart">
 					<span>Your cart</span>
 				</button>
 			</div>
@@ -25,13 +19,15 @@
 	</div>
 
 	<div class="search-box container">
-		<input
-			type="text"
-			class="search-box__input"
-			placeholder="Type your search query here..."
-		/>
+		<div class="search-box__field">
+			<input
+				type="text"
+				class="search-box__input"
+				placeholder="Type your search query here..."
+			/>
+		</div>
 		<div class="search-box__btns">
-			<button class="search-box__btn btn btn--primary">
+			<button class="search-box__btn btn btn--primary active">
 				Search in Posts and Blogs
 			</button>
 			<button class="search-box__btn btn btn--secondary">
@@ -40,43 +36,47 @@
 		</div>
 	</div>
 
-	<div class="header__navbar navbar container">
-		<ul class="menu">
-			<li class="menu-item menu-item-has-children menu-item-left menu-item-orange">
-				<a href="#">All Categories</a>
-				<ul class="sub-menu">
-					<li class="menu-item"><a href="#">SubLink</a></li>
-					<li class="menu-item"><a href="#">SubLink</a></li>
-					<li class="menu-item"><a href="#">SubLink</a></li>
-					<li class="menu-item"><a href="#">SubLink</a></li>
-				</ul>
-			</li>
+	<div class="header__navbar navbar">
+		<div class="navbar__content container">
+			<ul class="menu">
+				<li
+					class="menu-item menu-item-has-children menu-item-left menu-item-orange"
+				>
+					<a href="#">All Categories</a>
+					<ul class="sub-menu">
+						<li class="menu-item"><a href="#">SubLink</a></li>
+						<li class="menu-item"><a href="#">SubLink</a></li>
+						<li class="menu-item"><a href="#">SubLink</a></li>
+						<li class="menu-item"><a href="#">SubLink</a></li>
+					</ul>
+				</li>
 
-			<li class="menu-item menu-item-has-children">
-				<a href="#">About Us</a>
-				<ul class="sub-menu">
-					<li class="menu-item"><a href="#">SubLink</a></li>
-					<li class="menu-item"><a href="#">SubLink</a></li>
-					<li class="menu-item"><a href="#">SubLink</a></li>
-					<li class="menu-item"><a href="#">SubLink</a></li>
-				</ul>
-			</li>
-			<li class="menu-item"><a href="#">Home</a></li>
-			<li class="menu-item menu-item-has-children">
-				<a href="#">About Us</a>
-				<ul class="sub-menu">
-					<li class="menu-item"><a href="#">SubLink</a></li>
-					<li class="menu-item"><a href="#">SubLink</a></li>
-					<li class="menu-item"><a href="#">SubLink</a></li>
-					<li class="menu-item"><a href="#">SubLink</a></li>
-				</ul>
-			</li>
-			<li class="menu-item">
-				<a href="#">News</a>
-			</li>
-			<li class="menu-item">
-				<a href="#">Contact us</a>
-			</li>
-		</ul>
+				<li class="menu-item menu-item-has-children">
+					<a href="#">About Us</a>
+					<ul class="sub-menu">
+						<li class="menu-item"><a href="#">SubLink</a></li>
+						<li class="menu-item"><a href="#">SubLink</a></li>
+						<li class="menu-item"><a href="#">SubLink</a></li>
+						<li class="menu-item"><a href="#">SubLink</a></li>
+					</ul>
+				</li>
+				<li class="menu-item"><a href="#">Home</a></li>
+				<li class="menu-item menu-item-has-children">
+					<a href="#">About Us</a>
+					<ul class="sub-menu">
+						<li class="menu-item"><a href="#">SubLink</a></li>
+						<li class="menu-item"><a href="#">SubLink</a></li>
+						<li class="menu-item"><a href="#">SubLink</a></li>
+						<li class="menu-item"><a href="#">SubLink</a></li>
+					</ul>
+				</li>
+				<li class="menu-item">
+					<a href="#">News</a>
+				</li>
+				<li class="menu-item">
+					<a href="#">Contact us</a>
+				</li>
+			</ul>
+		</div>
 	</div>
 </header>

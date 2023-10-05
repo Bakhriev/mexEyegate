@@ -29,6 +29,25 @@ body {
 .btn-chat,
 .btn-cart {
 	padding: 12px 31px 12px 66px;
+
+	position: relative;
+
+	border-radius: 30px;
+
+	color: $black;
+	font-family: Montserrat;
+	font-size: 14px;
+	@media screen and (max-width: 1200px) {
+		font-size: 12px;
+	}
+	font-weight: 600;
+	line-height: normal;
+	letter-spacing: -0.56px;
+	border: 1px solid transparent;
+	transition:
+		border 150ms ease-in-out,
+		background-color 300ms ease-in-out;
+
 	@media screen and (max-width: 767px) {
 		padding: 10px;
 		width: 45px;
@@ -41,23 +60,15 @@ body {
 			display: none;
 		}
 	}
-	position: relative;
 
-	background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	border-radius: 30px;
-
-	color: $black;
-	font-family: Montserrat;
-	font-size: 14px;
-	font-weight: 600;
-	line-height: normal;
-	letter-spacing: -0.56px;
-	border: 1px solid transparent;
-	transition:
-		border 150ms ease-in-out,
-		background-color 300ms ease-in-out;
+	@media screen and (max-width: 359px) {
+		width: 35px;
+		height: 35px;
+		&::before {
+			width: 20px;
+			height: 20px;
+		}
+	}
 
 	&::before {
 		content: '';
@@ -69,10 +80,13 @@ body {
 		width: 24px;
 		height: 24px;
 		@media screen and (max-width: 767px) {
-			position: relative;
+			position: absolute;
 			left: auto;
 			top: auto;
 			transform: none;
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
 		}
 	}
 }
@@ -151,4 +165,29 @@ body {
 			// transform-origin: left bottom;
 		}
 	}
+}
+
+.btn {
+	font-family: Montserrat;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: normal;
+	transition:
+		background-color 300ms ease-in-out,
+		color 300ms ease-in-out;
+
+	&--secondary {
+		color: $black;
+		background-color: #fff;
+	}
+}
+
+.btn--primary.active {
+	color: #fff;
+	background-color: $green;
+}
+
+.btn--secondary.active {
+	color: #fff;
+	background-color: $green;
 }
