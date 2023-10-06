@@ -1,7 +1,14 @@
 .health {
 	padding-top: 76px;
 	padding-bottom: 100px;
-	background-color: gray;
+	background: rgb(227, 237, 143);
+	background: linear-gradient(
+		35deg,
+		rgba(227, 237, 143, 0.5) 1%,
+		rgba(255, 195, 174, 0.5) 50%,
+		rgba(143, 237, 181, 0.5) 95%
+	);
+
 	@media screen and (max-width: 992px) {
 		padding-top: 30px;
 		padding-bottom: 45px;

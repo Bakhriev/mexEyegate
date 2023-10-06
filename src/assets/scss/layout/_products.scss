@@ -43,11 +43,13 @@
 			background-repeat: no-repeat;
 		}
 	}
+
+	&--2 {
+	}
 	&--3 {
 		&::before {
 			content: '';
 			position: absolute;
-			z-index: -1;
 			bottom: 0px;
 			right: 0;
 			width: 100%;
@@ -275,4 +277,23 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
+}
+
+.green-gradient {
+	background: rgb(235, 242, 175);
+	background: linear-gradient(
+		11deg,
+		rgba(235, 242, 175, 1) 5%,
+		rgba(248, 248, 248, 1) 54%,
+		rgba(248, 248, 248, 1) 79%
+	);
+}
+.red-gradient {
+	background: rgb(248, 248, 248);
+	background: linear-gradient(
+		40deg,
+		rgba(248, 248, 248, 1) 1%,
+		rgba(248, 248, 248, 1) 50%,
+		rgba(255, 195, 174, 1) 95%
+	);
 }
