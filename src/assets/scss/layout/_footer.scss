@@ -161,6 +161,10 @@
 	line-height: 138%;
 	letter-spacing: 1.8px;
 	position: relative;
+	transition: color 150ms ease-in-out;
+	@include hover {
+		color: $orange-light;
+	}
 	&::before {
 		content: '';
 		position: absolute;

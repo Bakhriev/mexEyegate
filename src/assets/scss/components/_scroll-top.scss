@@ -1,0 +1,35 @@
+.scroll-top {
+	position: fixed;
+	opacity: 0;
+	transition: scale 300ms ease-in-out;
+	bottom: 40px;
+	right: 20px;
+	z-index: 25;
+	scale: 0;
+	&:active {
+		.scroll-top__bg {
+			scale: 0.97;
+		}
+		.scroll-top__line {
+			scale: 0.97;
+		}
+	}
+	@include hover {
+		.scroll-top__bg {
+			fill: rgba(104, 139, 88, 0.5);
+		}
+	}
+
+	&.active {
+		opacity: 1;
+		scale: 1;
+	}
+	&__bg {
+		transition: fill 200ms ease;
+		fill: rgba(104, 139, 88, 0.1);
+	}
+	&__line {
+		stroke: #688b58;
+		opacity: 1;
+	}
+}

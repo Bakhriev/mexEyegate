@@ -1,0 +1,47 @@
+.breadcrumb {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px 35px;
+	// .breadcrumb__item
+
+	// .breadcrumb__link
+
+	&__link {
+		position: relative;
+		color: #7c7c7c;
+		font-family: Montserrat;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: normal;
+		transition: color 150ms ease;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: -21px;
+			width: 5px;
+			height: 5px;
+			border-radius: 50%;
+			background-color: #e6e6e6;
+			transition: background-color 150ms ease;
+		}
+
+		@include hover {
+			color: $black;
+			&::after {
+				background-color: $black;
+			}
+		}
+	}
+}
+
+.breadcrumb-position {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	@media screen and (max-width: 992px) {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}

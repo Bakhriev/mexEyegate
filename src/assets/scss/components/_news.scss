@@ -1,0 +1,87 @@
+.news {
+	padding: 30px;
+	@media screen and (max-width: 768px) {
+		padding: 15px;
+	}
+	border-radius: 15px;
+	background: #fafcff;
+
+	// .news__title
+
+	&__title {
+		margin-bottom: 28px;
+		color: #000;
+		font-family: 'Lexend', serif;
+		font-size: 26px;
+		font-weight: 500;
+		line-height: normal;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+		li {
+			position: relative;
+			padding-left: 16px;
+			border-radius: 20px;
+
+			&::before {
+				content: '';
+				transition: background-color 150ms ease-in-out;
+				position: absolute;
+				top: 8px;
+				left: 0;
+				width: 7px;
+				height: 7px;
+				border-radius: 50%;
+				background-color: $orange-light;
+			}
+		}
+		a {
+			display: flex;
+			flex-direction: column;
+			gap: 6px;
+
+			h3 {
+				color: $green;
+				font-family: Montserrat;
+				font-size: 17px;
+				font-weight: 600;
+				line-height: 22px;
+				transition: color 150ms ease-in-out;
+				@include hover {
+					color: rgb(62, 126, 230);
+				}
+			}
+		}
+	}
+}
+
+.data-box {
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+		width: 16px;
+		height: 15px;
+		background-image: url('../img/calendar.svg');
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	padding-left: 27px;
+	color: #7c7c7c;
+	font-family: Montserrat;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: normal;
+
+	svg {
+		width: 18px;
+		height: 18px;
+	}
+}

@@ -16,11 +16,42 @@
 @import './components/burger';
 @import './components/menu';
 @import './components/to-products';
+@import './components/scroll-top';
+@import './components/breadcrumb';
+@import './components/article';
+@import './components/news';
 
 // Layouts
 @import './layout/header';
 @import './layout/hero';
 @import './layout/products';
 @import './layout/about';
+@import './layout/inner';
 @import './layout/health';
 @import './layout/footer';
+
+.grid-2 {
+	padding-bottom: 120px;
+	@media screen and (max-width: 992px) {
+		padding-bottom: 30px;
+	}
+	@media screen and (max-width: 768px) {
+		padding-bottom: 25px;
+	}
+	display: grid;
+	grid-template-columns: minmax(100px, 1fr) minmax(300px, 375px);
+	gap: 30px 60px;
+	@media screen and (max-width: 1200px) {
+		grid-template-columns: 1fr;
+	}
+	.left-side {
+	}
+	.right-side {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		@media screen and (max-width: 992px) {
+			gap: 25px;
+		}
+	}
+}
