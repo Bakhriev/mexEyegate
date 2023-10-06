@@ -1,5 +1,11 @@
 .hero {
 	padding-bottom: 72px;
+	@media screen and (max-width: 992px){
+		padding-bottom: 60px;
+	}
+	@media screen and (max-width: 768px){
+		padding-bottom: 20px;
+	}
 	// .hero__container
 
 	&__container {
