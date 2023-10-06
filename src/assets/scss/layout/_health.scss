@@ -1,0 +1,95 @@
+.health {
+	padding-top: 76px;
+	padding-bottom: 100px;
+	background-color: gray;
+	@media screen and (max-width: 992px) {
+		padding-top: 30px;
+		padding-bottom: 45px;
+	}
+
+	// .health__container
+
+	&__container {
+	}
+
+	// .health__title
+
+	&__title {
+		margin-bottom: 40px;
+		@media screen and (max-width: 992px) {
+			margin-bottom: 12px;
+			font-size: 30px;
+			line-height: 166%;
+		}
+		@media screen and (max-width: 768px) {
+			font-size: 22px;
+			line-height: 130%;
+		}
+		color: #14110f;
+		text-align: center;
+		font-family: Montserrat;
+		font-size: 36px;
+		font-weight: 700;
+		line-height: 138.889%;
+	}
+}
+.health-cards {
+	gap: 26px 20px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	@media screen and (max-width: 992px) {
+		grid-template-columns: 1fr;
+	}
+	@media screen and (max-width: 768px) {
+		gap: 15px;
+	}
+}
+.health-card {
+	padding: 34px 30px;
+	@media screen and (max-width: 992px) {
+		padding: 30px;
+	}
+	@media screen and (max-width: 768px) {
+		padding: 20px;
+	}
+
+	display: flex;
+	flex-direction: column;
+	border-radius: 20px;
+	background: #fff;
+	// .health-card__num
+
+	&__num {
+		margin-bottom: 12px;
+		display: grid;
+		width: 60px;
+		height: 60px;
+		@media screen and (max-width: 768px) {
+			width: 46px;
+			height: 46px;
+			font-size: 25px;
+		}
+		place-items: center;
+		border-radius: 200px;
+		background: linear-gradient(
+			50deg,
+			#e2ec8e 34.14%,
+			rgba(234, 244, 155, 0.52) 82.12%
+		);
+
+		color: #fff;
+		text-shadow: 0px 2px 4px #cbd673;
+		font-family: Montserrat;
+		font-size: 35px;
+		font-weight: 900;
+		line-height: normal;
+	}
+	p {
+		span {
+			color: $green;
+		}
+	}
+	p + p {
+		margin-top: 20px;
+	}
+}
