@@ -51,8 +51,11 @@ const toggleActiveClass = () => {
 
 export const burgerMenu = () => {
 	burger.addEventListener('click', toggleActiveClass)
-
-	overlay.addEventListener('click', toggleActiveClass)
+	overlay.addEventListener('click', () => {
+		toggleActiveClass()
+		resetActiveSubmenu()
+		resetActiveToggle()
+	})
 
 	window.addEventListener('resize', () => {
 		const {innerWidth} = window
