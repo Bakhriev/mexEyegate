@@ -3,17 +3,18 @@
 	@media screen and (max-width: 768px) {
 		padding: 15px;
 	}
-	border-radius: 15px;
-	background: #fafcff;
+	border-radius: 20px;
+	border: 1px solid #e2e5e9;
+	background: #fff;
 
 	// .news__title
 
 	&__title {
-		margin-bottom: 28px;
-		color: #000;
-		font-family: 'Lexend', serif;
-		font-size: 26px;
-		font-weight: 500;
+		margin-bottom: 20px;
+		color: #14110f;
+		font-family: Montserrat;
+		font-size: 20px;
+		font-weight: 700;
 		line-height: normal;
 	}
 

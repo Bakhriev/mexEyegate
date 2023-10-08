@@ -156,11 +156,23 @@
 	&__item {
 		padding-left: 24px;
 		position: relative;
+		@include hover {
+			a {
+				color: #151414;
+			}
+		}
 
-		font-family: Montserrat;
-		font-size: 17px;
-		font-weight: 500;
-		line-height: normal;
+		a {
+			transition: color 150ms ease-in-out;
+			color: #545e75;
+			font-family: Montserrat;
+			font-size: 17px;
+			font-weight: 500;
+			line-height: normal;
+			span {
+				font-weight: 700;
+			}
+		}
 		&::before {
 			content: '';
 			position: absolute;
@@ -184,6 +196,10 @@
 	&__item {
 		&:not(:last-child) {
 			border-bottom: 1px solid #eaeaea;
+			transition: border 150ms ease-in-out;
+			@include hover {
+				border-bottom: 1px solid black;
+			}
 		}
 		padding: 10px 0;
 		position: relative;
@@ -232,6 +248,10 @@
 		font-size: 16px;
 		font-weight: 600;
 		line-height: normal;
+		transition: color 150ms ease-in-out;
+		@include hover {
+			color: black;
+		}
 		span {
 			&:last-child {
 				color: #f65f2a;
@@ -276,6 +296,10 @@
 		background-position: center center;
 		background-size: cover;
 		background-repeat: no-repeat;
+		transition: scale 150ms ease-in-out;
+		@include hover {
+			scale: 1.1;
+		}
 	}
 }
 

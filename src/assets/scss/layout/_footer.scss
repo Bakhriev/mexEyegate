@@ -79,16 +79,6 @@
 		text-align: left;
 		align-items: flex-start;
 	}
-
-	// .footer__privacy
-
-	&__privacy {
-	}
-
-	// .footer__list
-
-	&__list {
-	}
 }
 
 .footer-bottom {
@@ -106,6 +96,13 @@
 		font-size: 15px;
 		font-weight: 400;
 		line-height: 166%;
+		transition: color 150ms ease-in-out;
+		@media screen and (max-width: 768px) {
+			font-size: 13px;
+		}
+		@include hover {
+			color: $orange-light;
+		}
 	}
 	&__container {
 		display: flex;
@@ -137,11 +134,14 @@
 					position: absolute;
 					top: 50%;
 					transform: translateY(-50%);
-					left: -25px;
+					left: -45px;
 					border-radius: 50%;
 					width: 5px;
 					height: 5px;
 					background-color: #688b58;
+					@media screen and (max-width: 768px) {
+						left: -25px;
+					}
 				}
 			}
 		}
